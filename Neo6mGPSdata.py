@@ -16,3 +16,6 @@ print(packet.position())
 
 # See amount of satelluts connected
 print("Satellites: " + str(packet.sats))
+
+# See speed GOTTA GO FAST
+print(" Speed: " + str(packet.speed()))

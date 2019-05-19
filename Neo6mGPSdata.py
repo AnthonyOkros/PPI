@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import gpsd
-
+import time
 # Connect to the local gpsd
 gpsd.connect()
 
@@ -12,10 +12,16 @@ gpsd.connect()
 packet = gpsd.get_current()
 
 # See the inline docs for GpsResponse for the available data
-print(packet.position())
+# print(packet.position())
 
 # See amount of satelluts connected
-print("Satellites: " + str(packet.sats))
+# print("Satellites: " + str(packet.sats))
 
 # See speed GOTTA GO FAST
-print(" Speed: " + str(packet.speed()))
+try:
+	while True:
+		print("Speed: " + str(packet.speed()))
+		time.sleep(1)
+except KeyboardInterrupt:
+        print('Ended Script')
+

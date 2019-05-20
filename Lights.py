@@ -58,11 +58,8 @@ try:
     if str(packet.speed()) > "5":
       pixels.fill((255, 0, 0))
       pixels.show()
-    if str(packet.speed()) > "0":
-      pixels.fill((255, 0, 0))
-      pixels.show()
     if str(packet.speed()) == "0":
-      pixels.fill((255, 0, 0))
+      pixels.fill((0, 0, 255))
       pixels.show()
       #rainbow(strip, wait_ms=20, iterations=5)
       #pixels.show()

@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-# Simple test for NeoPixels on Raspberry Pi
+# Script created by Anthony Okros.
+# Ensure gps3 is installed using: sudo -H pip3 install gps3
+# Visit https://pypi.org/project/gps3/ for more information
+
 import board
 import neopixel
 from gps3 import gps3
